@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>quotes</title>
+<style>
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100%;
+}
+
+.quote
+{
+	width: 1200px;
+	min-height: 400px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	z-index: 2;
+}
+.quote .box
+{
+	position: relative;
+	width: 360px;
+	grid-row-end: 400px;
+	background: #ccc;
+	overflow: hidden;
+	transition: .5s;
+	z-index: 2;
+	box-sizing: border-box;
+	padding: 30px;
+	box-shadow: -10px 25px 50px rgba(0,0,0,.2);
+}
+
+.quote .box:hover
+{
+	box-shadow: -20px 50px 100px rgba(0,0,0,.5);
+}
+
+.quote .bg
+{
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 1;
+	opacity: 0; 
+	transition: 0.5s;
+	pointer-events: none;
+	width:100%;
+	height: 100%;
+}
+
+.quote .box.box1:hover
+{
+	opacity: 1;
+	background: linear-gradient(#03A9F4,#E91E63);
+
+}
+
+.quote .box.box2:hover ~ .bg,
+.quote .box.box2:hover
+{
+	opacity: 1;
+	background: linear-gradient(#FFC107,#19fd36);
+
+}
+
+.quote .box.box3:hover ~ .bg,
+.quote .box.box3:hover
+{
+	opacity: 1;
+	background: linear-gradient(#FFC107,#E91E63);
+
+}
+</style>
+</head>
+<body>
+	<div  class="quote">
+		<div>
+			<div class="box box1">
+				<p>
+					The Art Of Communication Is Language Of Leadership
+				</p>
+				<h2> -James Humes</h2>
+			</div>
+			<div class="bg"></div>
+		</div>
+		<div>
+			<div class="box box2">
+				<p>
+					Effective Communication Is A Key Factor In The Success Of Your Product
+				</p>
+				<h2> -Jesse James</h2>
+			</div>
+			<div class="bg"></div>
+		</div>
+		<div>
+			<div class="box box3">
+				<p>The Ability To Listen Is As Much Important As To Speak
+				</p>
+				<h2> Sherly Sandberg</h2>
+			</div>
+			<div class="bg"></div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>
